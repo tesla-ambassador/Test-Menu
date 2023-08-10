@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-[#E9D3C0]">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                id="menu-btn"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+                <span id="menu-closed" class="block">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                </span>
+                <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+                <span id="menu-open" class="hidden">
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between"
+            >
+              <div class="flex flex-shrink-0 items-center">
+                <img
+                  class="h-8 w-auto"
+                  src="/public/logo/logo.svg"
+                  alt="Your Company"
+                />
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-[#A18167] text-gray-100", Default: "text-gray-700 hover:bg-[#D1B7A1] hover:text-gray-200" -->
+                  <a
+                    href="#"
+                    class="bg-[#A18167] text-gray-100 rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                    >Breakfast</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:bg-[#D1B7A1] hover:text-gray-200 rounded-md px-3 py-2 text-sm font-medium"
+                    >Food</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:bg-[#D1B7A1] hover:text-gray-200 rounded-md px-3 py-2 text-sm font-medium"
+                    >Drinks</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-[#A18167] text-gray-100", Default: "text-gray-700 hover:bg-[#D1B7A1] hover:text-gray-200" -->
+            <a
+              href="#"
+              class="bg-[#A18167] text-gray-100 rounded-md px-3 py-2 text-base font-medium"
+              aria-current="page"
+              >Breakfast</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:bg-[#D1B7A1] hover:text-gray-200 block rounded-md px-3 py-2 text-base font-medium"
+              >Food</a
+            >
+            <a
+              href="#"
+              class="text-gray-700 hover:bg-[#D1B7A1] hover:text-gray-200 block rounded-md px-3 py-2 text-base font-medium"
+              >Drinks</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="bg-white">
+        <div
+          class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+        >
+          <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+            Restaurant Menu
+          </h2>
+
+          <div
+            class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+          >
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/breakfast.jpeg"
+                  alt="Breakfast"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Breakfast
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Heavy</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 30&comma;000</p>
+              </div>
+            </div>
+
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/burger.jpg"
+                  alt="Burger"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Burger
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Double Size</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 15&comma;000</p>
+              </div>
+            </div>
+
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/salad.jpeg"
+                  alt="Salad"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Salad
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Vegan</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 25&comma;000</p>
+              </div>
+            </div>
+
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/fancy-juice.jpeg"
+                  alt="Juice"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Juice
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Multi&hyphen;flavoured</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 13&comma;000</p>
+              </div>
+            </div>
+
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/mohito.jpeg"
+                  alt="Mohito"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Mohito
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Pineapple</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 30&comma;000</p>
+              </div>
+            </div>
+
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/veggies.jpeg"
+                  alt="Veggies"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Veggies
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Heavy</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 28&comma;000</p>
+              </div>
+            </div>
+
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/cocktail2.jpeg"
+                  alt="Cocktail"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Cocktail
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">Non&hyphen;pombe</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 18&comma;000</p>
+              </div>
+            </div>
+
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+              >
+                <img
+                  src="../public/food-imgs/milk.jpeg"
+                  alt="Milk"
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div class="mt-4 flex justify-between">
+                <div>
+                  <h3 class="text-sm text-gray-700">
+                    <a href="#">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Milk
+                    </a>
+                  </h3>
+                  <p class="mt-1 text-sm text-gray-500">With cookies</p>
+                </div>
+                <p class="text-sm font-medium text-gray-900">UGX 12&comma;000</p>
+              </div>
+            </div>
+
+            <!-- More products... -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
